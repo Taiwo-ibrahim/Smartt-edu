@@ -1,0 +1,30 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Import external fonts */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Montserrat:wght@100..900&family=Noto+Sans:wght@100..900&display=swap');
+
+/* Define Uber Move font */
+@font-face {
+  font-family: 'UberMoveText';
+  src: url('https://fonts.cdnfonts.com/s/21625/UberMoveText-Bold.woff2') format('woff2'),
+       url('https://fonts.cdnfonts.com/s/21625/UberMoveText-Bold.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Custom properties */
+:root {
+  /* --background: #ffffff; */
+  /* --foreground: #171717; */
+  --font-uber-move: 'UberMoveText', sans-serif;
+}
+
+/* Global styles */
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-uber-move);
+}
