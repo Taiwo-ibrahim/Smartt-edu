@@ -17,7 +17,7 @@ export default function RootLayout({
         {/* Sidebar can be added here later if needed */}
         <div className="flex-1 flex flex-col">
           {/* Navbar can be added here too */}
-          <main className="h-full min-h-[1026px] bg-[#ffffff] flex-1">
+          <main className="h-full md:min-h-[1026px] bg-[#ffffff] flex-1">
             {children}
           </main>
         </div>

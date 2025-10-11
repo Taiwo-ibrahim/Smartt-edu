@@ -52,23 +52,24 @@ export default function SignIn() {
   };
 
   return (
-    <div className="w-full h-[100vh] min-h-[1026px] bg-[#ffffff] flex">
+    <div className="w-full h-[100vh] h-full md:min-h-[1026px] bg-[#ffffff] flex">
       {/* Left side image + text */}
-      <div className="w-1/2 flex flex-col p-[66px] bg-no-repeat bg-cover bg-center bg-[url('/signin-img.png')]">
+      <div className="hidden  md:w-1/2 md:flex md:flex-col lg:p-[66px] md:p-[30px] md:bg-no-repeat md:bg-cover md:bg-center bg-[url('/signin-img.png')]">
         <h2 className="text-[#257117] text-2xl font-bold text-[32px]/[40px]">Smartt</h2>
-        <div className="flex flex-col gap-[8px] text-[#FFFFFF] mt-[400px] w-[80%] max-w-[350px]">
-          <h2 className="text-2xl font-bold text-[30px]/[40px]">
+        <div className="flex flex-col gap-[8px] text-[#FFFFFF] mt-[400px] w-[100%] max-w-[350px]">
+          <h2 className=" w-full text-2xl font-bold text-[30px]/[40px]">
             Manage Your Academic Journey at a Go
           </h2>
-          <p className="text-[#E4E7EC] max-w-[346px] font-normal text-[16px]/[24px]">
+          <p className="w-full text-[#E4E7EC] max-w-[346px] font-normal text-[16px]/[24px]">
             From assignments and grades to schedules and communication, we’ve got everything you need to stay focused and organized
           </p>
         </div>
       </div>
 
       {/* Right side form */}
-      <div className="relative flex flex-col h-full w-1/2">
-        <div className="flex flex-col w-[80%] max-w-[517px] mt-[84px] mx-auto">
+      <div className="relative flex flex-col h-full w-full md:w-1/2">
+        <div className="flex flex-col w-[90%] max-w-[517px] mt-[84px] mx-auto">
+          <h2 className="font-[700] mb-[40px] md:hidden text-[20px]/[32px] text-[#257117]">Smartt</h2>
           <div className="flex flex-col gap-[8px]">
             <h2 className="text-[#101828] text-[24px]/[32px] font-[700]">Welcome Back</h2>
             <p className="text-[#344054] text-[16px]/[24px] font-[400]">
@@ -77,6 +78,7 @@ export default function SignIn() {
           </div>
 
           <form autoComplete="off" onSubmit={handleSignIn} className="mt-[24px] flex flex-col gap-[24px]">
+
             <div className="flex flex-col gap-[6px]">
               <label className="text-[14px]/[22px] font-[500] text-[#344054]" htmlFor="schoolEmail">
                 School Email
@@ -128,7 +130,7 @@ export default function SignIn() {
           </form>
         </div>
 
-        <div className="absolute bottom-0 w-full flex justify-center bg-[#F2F4F8] border-[#D0D5DD] p-[24px]">
+        <div className="mt-[150px] md:absolute md:bottom-0 w-full flex justify-center bg-[#F2F4F8] border-[#D0D5DD] p-[24px]">
           <p className="text-[#667085] text-[14px]/[22px]">
             &copy; 2025 Powered by Smartt Nig. All rights are reserved
           </p>

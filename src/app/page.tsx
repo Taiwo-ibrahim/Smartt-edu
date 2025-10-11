@@ -42,7 +42,7 @@ export default function Home() {
   const handleSignUp = async (data: FormValues) => {
     try {
       const res = await createUserWithEmailAndPassword(auth, data.schoolEmail, data.password);
-      console.log("User created:", res.user);
+      // console.log("User created:", res.user);
       router.push("/SignIn");
       sessionStorage.setItem("user", "true");
       if (res.user) {
@@ -55,7 +55,7 @@ export default function Home() {
 
   return (
      <div className="w-full h-[100vh] max-h-[1026px] bg-[#ffffff] min-h-[1025px] flex h-full max-h-[1025px]">
-       <div className="w-1/2 flex flex-col h-full p-[66px] gap-2 bg-no-repeat bg-cover bg-center bg-[url('/friend-study.png')] ">
+       <div className="hidden md:flex md:flex-col md:w-1/2 md:h-full md:p-[66px] md:border gap-2 bg-no-repeat bg-cover bg-center bg-[url('/friend-study.png')]">
             <h2 className="text-[#257117] text-2xl font-bold drop-shadow-(color:[#0000001F]) text-[32px]/[40px] ">Smartt</h2>
           <div className="flex flex-col gap-[8px] text-[#FFFFFF] mt-[350px] w-[80%] max-w-[350px]">
             <h2 className="text-2xl font-bold text-[30px]/[40px]">Manage Your Academic Journey at a Go</h2>
@@ -63,13 +63,15 @@ export default function Home() {
           </div>
         </div>
 
-      <div className=" relative flex flex-col h-full w-1/2">
+      <div className="w-full mx-auto relative flex flex-col h-full md:w-1/2">
         {/* <div className="flex flex-col w-full max-w-[520px] mt-[80px] mx-auto gap-[8px]">
           <h2 className="font-bold text-[24px]/[32px] text-[#101828]">Create an Account</h2>
           <p className="font-normal text-[16px]/[24px] text-[#344054]">Sign up and get started with Edusmart. Fill in your details and you're all set to explore our features</p>
         </div> */}
 
-        <div className="mt-[24px] mx-auto w-[100%] max-w-[517px]">
+        <div className="mt-[24px] mx-auto w-[90%] max-w-[517px]">
+
+          <h2 className="font-[700] md:hidden text-[20px]/[32px] text-[#257117]">Smartt</h2>
           {step === 1 ? (
             <PersonalInfo
               onNext={handleSubmit(handleNextStep)}
