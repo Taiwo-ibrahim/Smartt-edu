@@ -37,18 +37,18 @@ const RadialProgressChart = ({
   const progressOffset = arcLength - progressArc;
 
   return (
-    <div className="flex flex-col items-center">
-      <svg width="200" height="150" viewBox="0 0 120 80" className="-mt-12">
+    <div className="flex w-full flex-col items-center mt-[20px]">
+      <svg width="400" height="100" viewBox="0 0 120 80" className="-mt-12">
         {/* Background Arc */}
         <circle
-          cx="60" cy="60" r={R}
+          cx="70" cy="60" r={R}
           fill="none" stroke="#E5E7EB" strokeWidth="10"
           strokeDasharray={strokeDashArray} strokeDashoffset={arcOffset}
           strokeLinecap="round"
         />
         {/* Base Arc */}
         <circle
-          cx="60" cy="60" r={R}
+          cx="50" cy="60" r={R}
           fill="none" stroke="#9333ea" strokeWidth="10"
           strokeDasharray={strokeDashArray} strokeDashoffset={arcOffset}
           strokeLinecap="round"
@@ -95,7 +95,7 @@ const TermsAttendanceCard = () => {
   const attendance = { percent: 70, totalDays: 153, presentDays: 128, absentDays: 25 };
 
   return (
-    <div className="bg-white rounded-2xl shadow-lg p-6 border border-gray-200">
+    <div className="bg-white rounded-2xl shadow-sm p-3 border border-[#CCCCCC]">
       <div className="flex items-center justify-between mb-4">
         <h2 className="text-lg font-bold text-gray-800 flex items-center">
           <svg className="w-5 h-5 mr-2 text-yellow-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -114,15 +114,17 @@ const TermsAttendanceCard = () => {
       <p className="text-sm text-gray-500 mb-6">
         This is an average percentage of all the days you've been to school this term
       </p>
+      <div className='pt-[20px]'>
 
-      <RadialProgressChart {...attendance} />
+        <RadialProgressChart {...attendance} />
+      </div>
     </div>
   );
 };
 
 const ClassScheduleCard = () => {
   return (
-    <div className="bg-white rounded-2xl shadow-lg p-6 border border-gray-200 mt-8">
+    <div className="bg-white rounded-2xl shadow-sm p-6 border border-[#CCCCCC] mt-8">
       <div className="flex items-center justify-between mb-6">
         <h2 className="text-xl font-bold text-gray-800 flex items-center">
           <svg className="w-6 h-6 mr-2 text-gray-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -181,7 +183,7 @@ const ClassScheduleCard = () => {
 
 const AnnouncementsCard = () => {
   return (
-    <div className="bg-white rounded-2xl shadow-lg p-6 border border-gray-200 mt-8">
+    <div className="bg-white rounded-2xl shadow-sm p-6 border border-[#CCCCCC] mt-8">
       <div className="flex items-center mb-4">
         <h2 className="text-lg font-bold text-gray-800 flex items-center">
           <svg className="w-5 h-5 mr-2 text-red-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -192,7 +194,7 @@ const AnnouncementsCard = () => {
       </div>
 
       <div
-        className="relative h-32 w-full rounded-xl overflow-hidden shadow-xl"
+        className="relative h-32 w-full rounded-xl overflow-hidden shadow-md"
         style={{ backgroundImage: 'linear-gradient(135deg, #4A5568, #2D3748)', backgroundSize: 'cover' }}
       >
         <div className="absolute inset-0 p-4 flex flex-col justify-end">

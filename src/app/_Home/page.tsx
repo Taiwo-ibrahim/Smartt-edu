@@ -10,9 +10,12 @@ import PerformanceCard from "@/component/PerformanceCard";
 import AssignmentsCard from "@/component/AssignmentsCard";
 import RightPanel from "@/component/RightPanel";
 
+
+
+
 export default function Home() {
   return (
-    <div className="flex flex-col mb-[40px] w-full min-h-[935px] bg-[#F9FAFB] by-[#FFFFFF] gap-[10px]">
+    <div className="flex flex-col w-full min-h-[935px] bg-[#F9FAFB] by-[#FFFFFF] gap-[10px]">
       {/* ===== NAVBAR ===== */}
       <nav className="border-l pt-[25px] pb-[25px] border-b border-[#E4E7EC] bg-[#FFFFFF] flex items-center justify-between ">
         <div className="invisible">empty</div>

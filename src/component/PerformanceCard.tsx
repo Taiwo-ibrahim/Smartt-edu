@@ -10,7 +10,7 @@ const performanceData = [
 const GrowthCurve = () => {
   const linePath = "M0 50 Q 25 20, 50 35 T 100 20";
   return (
-    <div className="flex flex-col gap-4 p-4 border-l border-gray-100 md:w-1/3 lg:w-1/4">
+    <div className="flex flex-col gap-4 p-1 border-l border-gray-100 md:w-1/3 lg:w-1/4">
       <h3 className="text-[10px]/[14px]  font-[500] text-[#344054]">
         Your growth curve over the last 3 terms
       </h3>
@@ -37,7 +37,7 @@ const GrowthCurve = () => {
 };
 
 const LegendItem = ({ color, text }: { color: string; text: string }) => (
-  <div className="flex gap-[4px] items-flex-start">
+  <div className="flex gap-[4px] items-flex-end">
     <div className={`w-[10px] h-[8px] rounded-[2px] ${color} `}></div>
     <span className="text-[#202020D6] text-[12px]/[18px] font-[400]">{text}</span>
   </div>
@@ -46,9 +46,9 @@ const LegendItem = ({ color, text }: { color: string; text: string }) => (
 const PerformanceCard = () => {
   const MAX_GRADE = 100;
   return (
-    <div className="bg-white rounded-2xl shadow-lg p-6 border border-gray-200">
-      <h2 className="text-[16px]/[24px] font-[500] text-gray-800 mb-6">Current Term Performance</h2>
-      <div className="flex flex-col md:flex-row gap-6">
+    <div className="bg-white rounded-2xl shadow-sm p-6 border border-[#CCCCCC]">
+      <h2 className="text-[16px]/[24px] font-[600] text-gray-800 mb-6">Current Term Performance</h2>
+      <div className="flex flex-col md:flex-row gap-0">
         <div className="md:w-2/3 lg:w-3/4 flex flex-col">
           <div className="flex justify-between items-end h-72">
             <div className="w-10 flex flex-col justify-between h-full text-xs text-gray-500 pt-1">

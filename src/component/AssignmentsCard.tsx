@@ -77,7 +77,7 @@ const AssignmentItem = ({ assignment }: { assignment: any }) => {
   const progressBarWidth = `${assignment.progress}%`;
 
   return (
-    <div className="flex flex-col md:flex-row md:items-center py-4 border-t border-gray-100 last:border-b-0">
+    <div className="flex flex-col md:flex-row md:items-center py-4 border-t border-[#CCCCCC] border-b-0">
       {/* Icon & Subject Info */}
       <div className="flex items-center w-full md:w-1/3 mb-3 md:mb-0">
         <SubjectIcon subject={assignment.subject} />
