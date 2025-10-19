@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import { AuthProvider } from "@/Context/AuthContext";
 
 export const metadata: Metadata = {
   title: "Smartt App",
@@ -18,7 +19,9 @@ export default function RootLayout({
         <div className="flex-1 flex flex-col">
           {/* Navbar can be added here too */}
           <main className="h-full md:min-h-[1026px] bg-[#ffffff] flex-1">
-            {children}
+            <AuthProvider>
+              {children}
+            </AuthProvider>
           </main>
         </div>
       </body>
