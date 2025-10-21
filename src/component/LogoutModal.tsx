@@ -15,8 +15,8 @@ export function LogoutModal({ isOpen, onClose }: LogoutModalProps) {
   const handleLogout = async () => {
     try {
       await signOut(auth);
-      onClose(); // close modal
-      window.location.href = "/SignIn"; // redirect to login page
+      onClose(); 
+      window.location.href = "/SignIn"; 
     } catch (error) {
       console.error("Logout failed:", error);
     }

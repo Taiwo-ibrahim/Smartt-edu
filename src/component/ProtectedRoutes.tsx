@@ -1,7 +1,7 @@
 "use client";
 import { useRouter } from "next/navigation";
 import { useEffect } from "react";
-import { useAuth } from "@/context/AuthContext";
+import { useAuth } from "@/Context/AuthContext";
 
 export default function ProtectedRoute({ children }: { children: React.ReactNode }) {
   const { user, loading } = useAuth();
@@ -14,11 +14,11 @@ export default function ProtectedRoute({ children }: { children: React.ReactNode
   }, [user, loading, router]);
 
   if (loading) {
-    return <p className="text-center mt-10">Checking authentication...</p>;
+    return <p className="text-center mt-10">Comfirming authentication...</p>;
   }
 
   if (!user) {
-    return null; // or a loading spinner
+    return null; 
   }
 
   return <>{children}</>;
