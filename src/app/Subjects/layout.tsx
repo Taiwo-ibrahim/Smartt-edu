@@ -1,9 +1,9 @@
+import Loading from "@/component/loading"
 import { Sidebar } from "@/component/Sidebar"
 import { Suspense } from "react"
-import Loading from "../../component/loading"
 
 
-export default function HomeLayout({
+export default function SubjectLayout({
     children,
   }: {
     children: React.ReactNode

@@ -122,7 +122,7 @@ const AssignmentItem = ({ assignment }: { assignment: any }) => {
 // 🔸 Main Assignment Card
 const AssignmentsCard = () => {
   return (
-    <div className="bg-white rounded-2xl shadow-lg p-6 border border-gray-200">
+    <div className="bg-white rounded-2xl shadow-sm p-6 border border-[#CCCCCC]">
       {/* Header */}
       <div className="flex items-center mb-4">
         <h2 className="text-[16px]/[24px] font-500 text-[#101828] flex items-center">

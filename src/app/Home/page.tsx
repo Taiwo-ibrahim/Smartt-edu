@@ -15,9 +15,9 @@ export default function Home() {
   return (
     <ProtectedRoute>
 
-        <div className="flex flex-col mb-[40px] w-full min-h-[935px] bg-[#F9FAFB] by-[#FFFFFF] gap-[10px]">
+        <div className="flex flex-col mb-[40px] w-full h-full min-h-[935px] bg-[#F9FAFB] by-[#FFFFFF] gap-[10px]">
         {/* ===== NAVBAR ===== */}
-        <nav className="border-l pt-[25px] pb-[25px] border-b border-[#E4E7EC] bg-[#FFFFFF] flex items-center justify-between ">
+        <nav className="border-l pt-[25px] pb-[25px] border-b border-r border-[#E4E7EC] bg-[#FFFFFF] flex items-center justify-between ">
             <div className="invisible">empty</div>
 
             {/* Search Bar */}
@@ -41,7 +41,7 @@ export default function Home() {
         </nav>
 
         {/* ===== MAIN CONTENT ===== */}
-        <div className="w-full flex-col md:flex-row md:flex border-t border-l border-[#E4E7EC] min-h-[935px] bg-[#FFFFFF] items-start gap-[24px]">
+        <div className="w-full h-full flex-col md:flex-row md:flex border-t border-l border-r border-[#E4E7EC] min-h-[935px] bg-[#FFFFFF] items-start gap-[24px]">
 
             <section className="w-[70%] md:w-[75%] flex flex-col ">
                 <div className="border border-[#CCCCCC] max-w-[850px] w-full ml-[15px] bg-[#F5F5F5C2] p-[17px] rounded-[16px] flex flex-col mt-[25px]">
