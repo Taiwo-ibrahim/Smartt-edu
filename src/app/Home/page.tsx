@@ -41,9 +41,9 @@ export default function Home() {
         {/* ===== MAIN CONTENT ===== */}
         <div className="flex flex-col lg:flex-row w-full h-full border-t border-[#E4E7EC] bg-white">
           {/* LEFT / MAIN SECTION */}
-          <section className="flex-1 flex flex-col p-4 sm:p-6 gap-6">
+          <section className="flex-1 flex flex-col p-4 sm:p-4 gap-6">
             {/* Welcome Section */}
-            <div className="w-full bg-[#F5F5F5C2] border border-[#CCCCCC] rounded-[16px] p-4 sm:p-6 shadow-sm">
+            <div className="w-full bg-[#F5F5F5C2] border border-[#CCCCCC] rounded-[16px] p-1 sm:p-3 shadow-sm">
               <p className="text-sm sm:text-base font-medium">
                 Welcome,{" "}
                 <span className="font-bold text-xl sm:text-2xl">Aihsosa</span>{" "}
@@ -57,7 +57,7 @@ export default function Home() {
                 {/* Student Profile */}
                 <div className="flex-1 border border-[#E4E7EC] rounded-[12px] p-4 bg-white shadow-sm">
                   <div className="flex items-center gap-3 mb-4">
-                    <FaRegAddressCard className="text-[22px] bg-[#F5F5F5] p-1.5 rounded-md" />
+                    <FaRegAddressCard className="text-[22px] bg-[#F5F5F5] p-1 rounded-md" />
                     <p className="font-medium text-base">Student Profile</p>
                   </div>
 

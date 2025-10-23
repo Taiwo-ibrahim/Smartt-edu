@@ -1,3 +1,4 @@
+import ProtectedRoute from '@/component/ProtectedRoutes';
 import React from 'react';
 import { GoSearch } from 'react-icons/go';
 import { IoMdNotificationsOutline } from 'react-icons/io';
@@ -157,66 +158,70 @@ const EnrolledSubjectsTable = () => {
     );
 };
 
-// Main MySubjects Page Component
+// MySubjects Page Component
 export default function MySubjectsPage() {
   return (
-    <div className="flex min-h-screen " >
-      
+    <ProtectedRoute>
 
-      {/* Main Content Area */}
-      <div className="flex-1 flex flex-col">
-        {/* Top Header */}
-        <MainContentHeader />
+        <div className="flex min-h-screen " >
+        
 
-        {/* Page Specific Content */}
-        <div className="p-6 md:p-8 flex-1 overflow-auto bg-[#FFFFFF] mt-2 border border-[#E4E7EC]">
-           
+        {/* Main Content Area */}
+        <div className="flex-1 flex flex-col">
+            {/* Top Header component */}
+            <MainContentHeader />
 
-            {/* Subject Overview Card */}
-            <SubjectOverviewCard />
+            {/* Page Specific Content */}
+            <div className="p-6 md:p-8 flex-1 overflow-auto bg-[#FFFFFF] mt-2 border border-[#E4E7EC]">
+            
 
-            {/* Term Selection and Filter */}
-            <div className="flex flex-col sm:flex-row items-center justify-between mt-8 mb-6 gap-4">
-                <div className="relative w-full sm:w-64 p-1 rounded  border border-[#D0D5DD] cursor-pointer">
-                    <label htmlFor="term-select" className="sr-only">Select Term</label>
-                    <select 
-                        id="term-select" 
-                        className="block w-full pl-3 pr-10 py-2 text-base border-[#D0D5DD] focus:outline-none focus:ring-orange-500 focus:border-orange-500 sm:text-sm rounded-md shadow-sm"
-                    >
-                        <option className='p-1'>First Term (2024/2025)</option>
-                        <option>Second Term (2024/2025)</option>
-                        <option>Third Term (2024/2025)</option>
-                    </select>
-                    
-                </div>
+                {/* Subject Overview Card Component*/}
+                <SubjectOverviewCard />
 
-                <div className="flex flex-col sm:flex-row items-center gap-3 w-full sm:w-auto">
-                    {/* Date Pickers (mocked for visual only) */}
-                    <div className="flex items-center space-x-2 border border-gray-300 rounded-md px-3 py-2 text-sm text-gray-700 bg-white shadow-sm w-full sm:w-auto">
-
-                        <div className='flex gap-[4px] border-r pr-2'>
-                            <svg className="w-4 h-4 text-gray-500" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" /></svg>
-                            <span>8th Oct 2024</span>
-                        </div>
+                {/* Term Selection and Filter */}
+                <div className="flex flex-col sm:flex-row items-center justify-between mt-8 mb-6 gap-4">
+                    <div className="relative w-full sm:w-64 p-1 rounded  border border-[#D0D5DD] cursor-pointer">
+                        <label htmlFor="term-select" className="sr-only">Select Term</label>
+                        <select 
+                            id="term-select" 
+                            className="block w-full pl-3 pr-10 py-2 text-base border-[#D0D5DD] focus:outline-none focus:ring-orange-500 focus:border-orange-500 sm:text-sm rounded-md shadow-sm"
+                        >
+                            <option className='p-1'>First Term (2024/2025)</option>
+                            <option>Second Term (2024/2025)</option>
+                            <option>Third Term (2024/2025)</option>
+                        </select>
                         
-                        <div className='flex gap-[4px]'>
-                            <svg className="w-4 h-4 text-gray-500" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" /></svg>
-                            <span>8th Oct 2025</span>
-                        </div>
                     </div>
 
-                    
-                    <button className="flex items-center px-4 py-2 bg-white border border-gray-300 rounded-md text-sm font-medium text-gray-700 hover:bg-gray-50 transition w-full sm:w-auto justify-center">
-                        <svg className="w-4 h-4 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 4a1 1 0 011-1h16a1 1 0 011 1v2.586a1 1 0 01-.293.707l-6.414 6.414a1 1 0 00-.293.707V17l-4 4v-6.586a1 1 0 00-.293-.707L3.293 7.293A1 1 0 013 6.586V4z" /></svg>
-                        Filter
-                    </button>
-                </div>
-            </div>
+                    <div className="flex flex-col sm:flex-row items-center gap-3 w-full sm:w-auto">
+                        {/* Date Pickers (mocked for visual only) */}
+                        <div className="flex items-center space-x-2 border border-gray-300 rounded-md px-3 py-2 text-sm text-gray-700 bg-white shadow-sm w-full sm:w-auto">
 
-            {/* Enrolled Subjects Table */}
-            <EnrolledSubjectsTable />
+                            <div className='flex gap-[4px] border-r pr-2'>
+                                <svg className="w-4 h-4 text-gray-500" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" /></svg>
+                                <span>8th Oct 2024</span>
+                            </div>
+                            
+                            <div className='flex gap-[4px]'>
+                                <svg className="w-4 h-4 text-gray-500" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" /></svg>
+                                <span>8th Oct 2025</span>
+                            </div>
+                        </div>
+
+                        
+                        <button className="flex items-center px-4 py-2 bg-white border border-gray-300 rounded-md text-sm font-medium text-gray-700 hover:bg-gray-50 transition w-full sm:w-auto justify-center">
+                            <svg className="w-4 h-4 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 4a1 1 0 011-1h16a1 1 0 011 1v2.586a1 1 0 01-.293.707l-6.414 6.414a1 1 0 00-.293.707V17l-4 4v-6.586a1 1 0 00-.293-.707L3.293 7.293A1 1 0 013 6.586V4z" /></svg>
+                            Filter
+                        </button>
+                    </div>
+                </div>
+
+                {/* Enrolled Subjects Table */}
+                <EnrolledSubjectsTable />
+            </div>
         </div>
-      </div>
-    </div>
+        </div>
+    </ProtectedRoute>
+
   );
 }
