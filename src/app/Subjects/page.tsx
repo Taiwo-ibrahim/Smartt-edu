@@ -103,7 +103,7 @@ const SubjectOverviewCard = () => {
 const EnrolledSubjectsTable = () => {
     return (
         <div className="bg-white rounded-lg shadow-sm mt-8 overflow-hidden">
-            <div className="px-6 py-4 border-b border-gray-200">
+            <div className=" py-4 border-b border-gray-200">
                 <h3 className="text-[16px]/[24px] font-medium text-gray-900 flex items-center">
                     First Term (2024/2025) Enrolled Subjects 
                     <span className="ml-2 bg-gray-200 text-gray-700 text-xs font-medium px-2 py-0.5 rounded-full">8</span>
@@ -113,19 +113,19 @@ const EnrolledSubjectsTable = () => {
                 <table className="min-w-full divide-y divide-gray-200">
                     <thead className="bg-gray-50">
                         <tr>
-                            <th scope="col" className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                            <th scope="col" className="px-6 py-3 text-left text-[14px]/[22px] font-[500] font-medium text-gray-900">
                                 S/N
                             </th>
-                            <th scope="col" className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                            <th scope="col" className="px-6 py-3 text-left text-[14px]/[22px] font-[500] font-medium text-gray-900 ">
                                 Enrolled Subjects
                             </th>
-                            <th scope="col" className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                            <th scope="col" className="px-6 py-3 text-left text-[14px]/[22px] font-[500] font-medium text-gray-900">
                                 Subject Teachers
                             </th>
-                            <th scope="col" className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                            <th scope="col" className="px-6 py-3 text-left text-[14px]/[22px] font-[500] font-medium text-gray-900">
                                 Class Schedules
                             </th>
-                            <th scope="col" className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                            <th scope="col" className="px-6 py-3 text-left text-[14px]/[22px] font-[500] font-medium text-gray-900">
                                 Topics/Outline
                             </th>
                         </tr>
@@ -133,19 +133,19 @@ const EnrolledSubjectsTable = () => {
                     <tbody className="bg-white divide-y divide-gray-200">
                         {enrolledSubjectsData.map((subject, index) => (
                             <tr key={index}>
-                                <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
+                                <td className="px-6 py-4 whitespace-nowrap font-500 text-[14px]/[22px] text-[#000000]">
                                     {subject.sn}.
                                 </td>
-                                <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">
+                                <td className="px-6 py-4 whitespace-nowrap font-400 text-[14px]/[22px] text-[#101828]">
                                     {subject.subject}
                                 </td>
-                                <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
+                                <td className="px-6 py-4 whitespace-nowrap font-400 text-[14px]/[22px] text-[#101828]">
                                     {subject.teacher}
                                 </td>
-                                <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
+                                <td className="px-6 py-4 whitespace-nowrap font-400 text-[14px]/[22px] text-[#101828]">
                                     {subject.schedule}
                                 </td>
-                                <td className="px-6 py-4 whitespace-nowrap text-right text-sm font-medium">
+                                <td className="px-6 py-4 whitespace-nowrap font-400 text-right text-[14px]/[22px] font-medium">
                                     <button className="text-[#257117] underline">View Outline</button>
                                 </td>
                             </tr>

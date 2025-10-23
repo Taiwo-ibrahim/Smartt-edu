@@ -124,7 +124,7 @@ const TermsAttendanceCard = () => {
 
 const ClassScheduleCard = () => {
   return (
-    <div className="bg-white rounded-2xl shadow-sm p-6 border border-[#CCCCCC] mt-8">
+    <div className="bg-white rounded-2xl shadow-sm p-3 border border-[#CCCCCC] mt-8">
       <div className="flex items-center justify-between mb-6">
         <h2 className="text-xl font-bold text-gray-800 flex items-center">
           <svg className="w-6 h-6 mr-2 text-gray-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -183,7 +183,7 @@ const ClassScheduleCard = () => {
 
 const AnnouncementsCard = () => {
   return (
-    <div className="bg-white rounded-2xl shadow-sm p-6 border border-[#CCCCCC] mt-8">
+    <div className="bg-white rounded-2xl shadow-sm p-2 border border-[#CCCCCC] mt-8">
       <div className="flex items-center mb-4">
         <h2 className="text-lg font-bold text-gray-800 flex items-center">
           <svg className="w-5 h-5 mr-2 text-red-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">

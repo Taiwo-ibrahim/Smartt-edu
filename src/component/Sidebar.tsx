@@ -19,8 +19,8 @@ import { LogoutModal } from "./LogoutModal";
 const links = [
     { href: "/Home", label: "Dashboard", icon: GoHome },
     { href: "/Subjects", label: "My Subjects", icon: PiBookOpenTextThin },
-    { href: "/dashboard/Home", label: "My Assignmentss", icon: HiOutlineComputerDesktop },
-    { href: "/dashboard/Home", label: "My Assignments", icon: MdOutlineAssignment },
+    { href: "/dashboard/Home", label: "CBT & Exams ", icon: HiOutlineComputerDesktop },
+    { href: "/dashboard/Home", label: "My Assignment", icon: MdOutlineAssignment },
     { href: "/dashboard/Home", label: "Results Checker", icon: IoReaderOutline },
     { href: "/dashboard/Home", label: "Notifications", icon: IoMdNotificationsOutline },
     { href: "/dashboard/Home", label: "Profile", icon: CgProfile },
