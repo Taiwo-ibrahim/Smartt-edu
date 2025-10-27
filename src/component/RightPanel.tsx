@@ -1,4 +1,5 @@
 import React from 'react';
+import PunctualityGauge from './PunctualityGauge';
 
 // --- MOCK DATA ---
 const scheduleData = [
@@ -114,9 +115,10 @@ const TermsAttendanceCard = () => {
       <p className="text-sm text-gray-500 mb-6">
         This is an average percentage of all the days you've been to school this term
       </p>
-      <div className='pt-[20px]'>
-
-        <RadialProgressChart {...attendance} />
+      <div className='pt-[10px]'>
+        {/* <PunctualityGauge /> */}
+        <PunctualityGauge possibleDays={100} presentDays={70} absentDays={30} />
+        {/* <RadialProgressChart {...attendance} /> */}
       </div>
     </div>
   );

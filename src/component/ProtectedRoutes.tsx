@@ -14,7 +14,7 @@ export default function ProtectedRoute({ children }: { children: React.ReactNode
   }, [user, loading, router]);
 
   if (loading) {
-    return <p className="text-center mt-10">Comfirming authentication...</p>;
+    return <p className="text-center mt-10">Confirming authentication...</p>;
   }
 
   if (!user) {
