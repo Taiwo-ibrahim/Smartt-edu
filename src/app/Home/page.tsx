@@ -12,11 +12,12 @@ import ProtectedRoute from "@/component/ProtectedRoutes";
 export default function Home() {
   return (
     <ProtectedRoute>
-      <div className="flex flex-col w-full min-h-screen bg-[#F9FAFB] text-[#101828]">
+      <div className="flex flex-col w-full gap-[10px] min-h-screen bg-[#F9FAFB] text-[#101828]">
         {/* ===== NAVBAR ===== */}
         <nav className="flex items-center justify-between w-full bg-white border-b border-[#E4E7EC] pt-[25px] pb-[25px] sm:p-5">
+            {/* This is an empty div just made invisible for the sake of styling  */}
             <div className="invisible">
-                <h2>Empt</h2>
+                <h2>Empty</h2>
             </div>
           {/* Search Bar */}
           <div className="hidden sm:flex gap-2 items-center w-full max-w-[350px] border border-[#E4E7EC] rounded-[8px] bg-[#F9FAFB] p-2">

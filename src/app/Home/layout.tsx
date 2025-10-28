@@ -9,7 +9,7 @@ export default function HomeLayout({
     children: React.ReactNode
   }) {
     return (
-        <section className="flex w-full gap-[10px] bg-[#F9FAFB]">
+        <section className="flex w-full gap-[10px] overflow-hidden bg-[#F9FAFB]">
             <div className="w-[21%]  min-w-[280px]">
                 <Sidebar />
             </div>

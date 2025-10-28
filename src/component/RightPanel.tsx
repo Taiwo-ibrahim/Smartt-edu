@@ -39,54 +39,15 @@ const RadialProgressChart = ({
 
   return (
     <div className="flex w-full flex-col items-center mt-[20px]">
-      <svg width="400" height="100" viewBox="0 0 120 80" className="-mt-12">
+      <svg width="400" height="30" viewBox="0 0 120 80" className="-mt-12">
         {/* Background Arc */}
-        <circle
-          cx="70" cy="60" r={R}
-          fill="none" stroke="#E5E7EB" strokeWidth="10"
-          strokeDasharray={strokeDashArray} strokeDashoffset={arcOffset}
-          strokeLinecap="round"
-        />
-        {/* Base Arc */}
-        <circle
-          cx="50" cy="60" r={R}
-          fill="none" stroke="#9333ea" strokeWidth="10"
-          strokeDasharray={strokeDashArray} strokeDashoffset={arcOffset}
-          strokeLinecap="round"
-        />
-        {/* Progress Arc */}
-        <circle
-          cx="60" cy="60" r={R}
-          fill="none" stroke="#F97316" strokeWidth="10"
-          strokeDasharray={strokeDashArray} strokeDashoffset={arcOffset + progressOffset}
-          strokeLinecap="round" className="transition-all duration-1000"
-        />
+        
         {/* Labels */}
-        <text x="60" y="55" textAnchor="middle" className="text-3xl font-bold fill-gray-900">
-          {percent}%
-        </text>
-        <text x="60" y="68" textAnchor="middle" className="text-xs font-medium fill-gray-500">
-          PUNCTUALITY
-        </text>
+        
       </svg>
 
       {/* Legend */}
-      <div className="w-full mt-2 space-y-2 text-sm">
-        <p className="text-gray-600">
-          <span className="w-2.5 h-2.5 inline-block rounded-full bg-purple-600 mr-2"></span>
-          Total No of School Days - <span className="font-semibold">{totalDays}</span>
-        </p>
-        <p className="flex justify-between w-full">
-          <span className="text-gray-600">
-            <span className="w-2.5 h-2.5 inline-block rounded-full bg-yellow-500 mr-2"></span>
-            Days Present - <span className="font-semibold text-gray-800">{presentDays}</span>
-          </span>
-          <span className="text-gray-600">
-            <span className="w-2.5 h-2.5 inline-block rounded-full bg-red-500 mr-2"></span>
-            Days Absent - <span className="font-semibold text-gray-800">{absentDays}</span>
-          </span>
-        </p>
-      </div>
+      
     </div>
   );
 };
@@ -115,10 +76,10 @@ const TermsAttendanceCard = () => {
       <p className="text-sm text-gray-500 mb-6">
         This is an average percentage of all the days you've been to school this term
       </p>
-      <div className='pt-[10px]'>
+      <div className=''>
         {/* <PunctualityGauge /> */}
         <PunctualityGauge possibleDays={100} presentDays={70} absentDays={30} />
-        {/* <RadialProgressChart {...attendance} /> */}
+        <RadialProgressChart {...attendance} />
       </div>
     </div>
   );
