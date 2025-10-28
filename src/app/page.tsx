@@ -59,7 +59,7 @@ export default function Home() {
             <h2 className="text-[#257117] text-2xl font-bold drop-shadow-(color:[#0000001F]) text-[32px]/[40px] ">Smartt</h2>
           <div className="flex flex-col gap-[8px] text-[#FFFFFF] mt-[350px] w-[80%] max-w-[350px]">
             <h2 className="text-2xl font-bold text-[30px]/[40px]">Manage Your Academic Journey at a Go</h2>
-            <p className="text-[#E4E7EC] w-full max-w-[346px] drop-shadow-(color:[#0000001F]) font-normal text-[16px]/[24px] ">From assignments and grades to schedules and communication, we've got everything you need to stay focused and organized</p>
+            <p className="text-[#E4E7EC] w-full max-w-[346px] drop-shadow-(color:[#0000001F]) font-normal text-[16px]/[24px] ">From assignments and grades to schedules and communication, we`&apos;`ve got everything you need to stay focused and organized</p>
           </div>
         </div>
 

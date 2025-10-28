@@ -99,7 +99,7 @@ export function PersonalInfo({ onNext, register, errors, setValue }: PersonalInf
                 >
                   <span className='flex gap-[6px] items-center'>
                     <BsPerson className='text-[#667085]' />
-                    <p className='font-[500] text-[16px]/[24px]'>Student's Account </p>
+                    <p className='font-[500] text-[16px]/[24px]'>Student`&apos;`s Account </p>
                   </span>
                   <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#257117" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
                 </button>
@@ -110,7 +110,7 @@ export function PersonalInfo({ onNext, register, errors, setValue }: PersonalInf
                 >
                   <span className='flex gap-[6px] items-center'>
                     <BsPerson className='text-[#667085]' />
-                    <p className='text-[#101828] text-[16px]/[24px]'>Teacher's Account</p>
+                    <p className='text-[#101828] text-[16px]/[24px]'>Teacher`&apos;`s Account</p>
                   </span>
                 </button>
                 <button
@@ -120,7 +120,7 @@ export function PersonalInfo({ onNext, register, errors, setValue }: PersonalInf
                 >
                   <span className='flex gap-[6px] items-center'>
                     <BsPerson className='text-[#667085]' />
-                    <p className='text-[#101828] text-[16px]/[24px]'>Parent's Account</p>
+                    <p className='text-[#101828] text-[16px]/[24px]'>Parent`&apos;`s Account</p>
                   </span>
                 </button>
               </div>

@@ -74,7 +74,7 @@ const TermsAttendanceCard = () => {
       </div>
 
       <p className="text-sm text-gray-500 mb-6">
-        This is an average percentage of all the days you've been to school this term
+        This is an average percentage of all the days you`&apos;`ve been to school this term
       </p>
       <div className=''>
         {/* <PunctualityGauge /> */}

@@ -121,7 +121,7 @@ export default function SignIn() {
               </button>
 
               <span className="flex mt-[16px] items-center justify-center gap-[4px]">
-                <p className="text-[#101828] text-[16px]/[24px]">Don't have an account?</p>
+                <p className="text-[#101828] text-[16px]/[24px]">Don`&apos;`t have an account?</p>
                 <Link className="font-[500] text-[#B44A05] underline underline-offset-4 text-[16px]/[24px]" href="/">
                   SignUp here
                 </Link>
