@@ -1,11 +1,15 @@
 "use client";
 import { createContext, useContext, useEffect, useState } from "react";
 import { onAuthStateChanged, User } from "firebase/auth";
-import { auth } from "@/lib/firebase"; // your firebase setup file
+import {doc, getDoc } from "firebase/firestore"
+import { auth, db } from "@/lib/firebase"; // your firebase setup file
+
+type UserRole = "student" | "parent" | "teacher";
 
 interface AuthContextType {
   user: User | null;
   loading: boolean;
+  role?: String 
 }
 
 const AuthContext = createContext<AuthContextType>({
