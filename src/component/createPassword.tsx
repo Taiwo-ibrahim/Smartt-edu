@@ -68,7 +68,7 @@ export function CreatePassword({ onSubmit }: CreatePasswordProps) {
                     {errors.confirmPassword && <p className="text-red-500 text-sm mt-1">{errors.confirmPassword.message}</p>}
                 </div>
 
-                <button type='submit' className='bg-[#D0D5DD] text-[#FFFFFF] mt-[50px] hover:opacity-90 w-full p-[11px] rounded-[8px] cursor-pointer text-[14px]/[22px]'>Sign up</button>
+                <button  type='submit' className='bg-[#D0D5DD] text-[#FFFFFF] mt-[50px] hover:opacity-90 w-full p-[11px] rounded-[8px] cursor-pointer text-[14px]/[22px]'>Sign up</button>
             </form>
         </div>
     )
