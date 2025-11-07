@@ -123,14 +123,6 @@ export const AuthProvider = ({ children }: { children: React.ReactNode }) => {
     }, []);
 
 
-  // useEffect(() => {
-  //   const unsubscribe = onAuthStateChanged(auth, (firebaseUser) => {
-  //     setUser(firebaseUser);
-  //     setLoading(false);
-  //   });
-  //   return unsubscribe;
-  // }, []);
-
   return (
     <AuthContext.Provider value={{ user, loading, role }}>
       {children}
