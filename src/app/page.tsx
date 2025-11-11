@@ -68,7 +68,8 @@ export default function Home() {
       router.push("/SignIn");
     } catch (error) {
       console.error("Signup failed:", error);
-      alert(error.message);
+      const message = error instanceof Error ? error.message : "An unexpected error occurred";
+      alert(message);
     }
   };
 
