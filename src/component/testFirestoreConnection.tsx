@@ -24,7 +24,7 @@ export default function TestFirestoreConnection() {
       } else {
         setMessage("⚠️ Document not found — Firestore might not be initialized correctly.");
       }
-    } catch (error: any) {
+    } catch (error) {
       setMessage(`❌ Firestore error: ${error.message}`);
     }
   };

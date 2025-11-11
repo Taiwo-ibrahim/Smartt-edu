@@ -66,7 +66,7 @@ const PerformanceCard = () => {
                   {data.isCurrent && (
                     <>
                       <div className="absolute -top-10 left-1/2 transform -translate-x-1/2 bg-[#792E0D] text-xs font-semibold px-2 py-0.5 rounded-md text-[#F1F1F1] text-[10px]/[18px] shadow-md whitespace-nowrap">
-                        You're Here
+                        You&apos;re Here
                       </div>
                       <div className="absolute top-0 bottom-0 left-0 right-0 border-2 border-dashed border-green-400 rounded-lg -mx-1 -mb-1 bg-[#3BAD2614]"></div>
                     </>

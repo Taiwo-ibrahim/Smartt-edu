@@ -66,7 +66,7 @@ export default function Home() {
       });
 
       router.push("/SignIn");
-    } catch (error: any) {
+    } catch (error) {
       console.error("Signup failed:", error);
       alert(error.message);
     }

@@ -95,7 +95,7 @@ const ProgressBar: React.FC<ProgressBarProps> = ({ label, percentage, color = 'b
 
 export default function TeacherDashboard() {
   return (
-    // <div className="min-h-screen bg-[#F9FAFB] flex flex-col ">
+    // <div className="min-&apos;-screen bg-[#F9FAFB] flex flex-col ">
     //     <div className='flex flex-col '>
 
     //         <DashboardHeader />
@@ -563,7 +563,7 @@ export default function TeacherDashboard() {
             {/* Today's Schedule */}
             <div className="bg-white p-6 rounded-lg shadow-sm border border-gray-200">
             <div className="flex justify-between items-center mb-4">
-                     <h2 className="text-lg font-semibold text-gray-900">Today's Schedule</h2>
+                     <h2 className="text-lg font-semibold text-gray-900">Today&apos;s Schedule</h2>
                      <select className="px-3 py-1 border border-gray-300 rounded-lg text-gray-700 text-xs bg-white focus:outline-none">
                          <option>11th Grade</option>
                          <option>10th Grade</option>

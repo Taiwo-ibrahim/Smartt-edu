@@ -41,7 +41,7 @@ export default function ProtectedRoute({ children, allowedRoles }: ProtectedRout
       return (
         <div className="text-center mt-10">
           <p className="text-red-500">Access Denied</p>
-          <p className="text-gray-600">You don't have permission to access this page.</p>
+          <p className="text-gray-600">You don&apos;t have permission to access this page.</p>
         </div>
       );
     }
