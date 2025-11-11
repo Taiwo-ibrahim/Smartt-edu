@@ -82,8 +82,8 @@ export const AuthProvider = ({ children }: { children: React.ReactNode }) => {
           console.error("Error fetching role from Firestore:", error.message);
           
           // Check if it's a Firestore-specific error
-          if ((error as any).code) {
-            console.error("Firestore error code:", (error as any).code);
+          if ((error)) {
+            console.error("Firestore error code:", (error));
           }
         } else {
           console.error("Unknown error fetching role:", error);
