@@ -73,7 +73,22 @@ const SubjectIcon = ({ subject }: { subject: string }) => {
 };
 
 // 🔶 Assignment Item Component
-const AssignmentItem = ({ assignment }: { assignment: any }) => {
+
+
+type Assignment = {
+  title: string;
+  subject: string;
+  date: string;
+  progress: number;
+  completed: number;
+  total: number;
+};
+
+interface AssignmentItemProps {
+  assignment: Assignment;
+}
+
+const AssignmentItem = ({ assignment }: AssignmentItemProps) => {
   const progressBarWidth = `${assignment.progress}%`;
 
   return (
@@ -95,7 +110,7 @@ const AssignmentItem = ({ assignment }: { assignment: any }) => {
 
       {/* Progress Bar */}
       <div className="flex flex-col flex-grow mx-4">
-        <div className="w-full bg-[#FBA43C29] rounded-full h-[4px]  overflow-hidden">
+        <div className="w-full bg-[#FBA43C29] rounded-full h-[4px] overflow-hidden">
           <div
             className="h-full rounded-full bg-[#FBA43C] transition-all duration-500"
             style={{ width: progressBarWidth }}
@@ -118,6 +133,52 @@ const AssignmentItem = ({ assignment }: { assignment: any }) => {
     </div>
   );
 };
+
+// const AssignmentItem = ({ assignment }: { assignment: any }) => {
+//   const progressBarWidth = `${assignment.progress}%`;
+
+//   return (
+//     <div className="flex flex-col md:flex-row md:items-center py-4 border-t border-[#CCCCCC] border-b-0">
+//       {/* Icon & Subject Info */}
+//       <div className="flex items-center w-full md:w-1/3 mb-3 md:mb-0">
+//         <SubjectIcon subject={assignment.subject} />
+//         <div className="ml-4">
+//           <p className="font-500 text-[14px]/[22px] text-gray-800">{assignment.title}</p>
+//           <p className="font-400 text-[14px]/[22px] text-gray-500">{assignment.subject}</p>
+//         </div>
+//       </div>
+
+//       {/* Submission Date */}
+//       <div className="hidden md:block w-40 text-sm text-gray-600">
+//         Submission Date
+//         <p className="font-medium text-gray-800">{assignment.date}</p>
+//       </div>
+
+//       {/* Progress Bar */}
+//       <div className="flex flex-col flex-grow mx-4">
+//         <div className="w-full bg-[#FBA43C29] rounded-full h-[4px]  overflow-hidden">
+//           <div
+//             className="h-full rounded-full bg-[#FBA43C] transition-all duration-500"
+//             style={{ width: progressBarWidth }}
+//           ></div>
+//         </div>
+//         <div className="flex justify-between text-xs text-gray-500 mt-1">
+//           <span className="text-gray-700 font-medium">
+//             {assignment.progress}%
+//           </span>
+//           <span>
+//             {assignment.completed}/{assignment.total}
+//           </span>
+//         </div>
+//       </div>
+
+//       {/* View Button */}
+//       <button className="mt-3 md:mt-0 md:ml-4 px-4 py-2 bg-[#FCB485] text-[#000000A3] border border-[#FB914C] font-medium rounded-lg transition duration-150 shadow-md">
+//         View
+//       </button>
+//     </div>
+//   );
+// };
 
 // 🔸 Main Assignment Card
 const AssignmentsCard = () => {

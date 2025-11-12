@@ -59,9 +59,14 @@ export default function SignIn() {
       else if (role === "Parent's Account") router.push("/parent");
       // else router.push("/Home");
 
-    } catch (error) {
-      console.error("Login failed:", error.message);
-      setErrorMsg("Invalid email or password");
+    } catch (error: unknown) {
+      if (error instanceof Error) {
+        console.error("Login failed:", error.message);
+        setErrorMsg(error.message);
+      } else {
+        console.error("Login failed:", error);
+        setErrorMsg("Invalid email or password");
+      }
     } finally {
       setLoading(false);
     }
