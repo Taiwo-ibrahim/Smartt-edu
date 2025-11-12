@@ -1,3 +1,6 @@
+"use client";
+
+
 import ProtectedRoute from '@/component/ProtectedRoutes';
 import React from 'react';
 import { IoMdNotificationsOutline } from 'react-icons/io';
