@@ -54,9 +54,9 @@ export default function SignIn() {
       console.log("Redirecting role:", role);
 
       // 🔥 Only redirect here
-      if (role === "Student's Account") router.push("/student");
-      else if (role === "Teacher's Account") router.push("/teacher");
-      else if (role === "Parent's Account") router.push("/parent");
+      if (role === "student") router.push("/student");
+      else if (role === "teacher") router.push("/teacher");
+      else if (role === "parent") router.push("/parent");
       // else router.push("/Home");
 
     } catch (error: unknown) {
@@ -153,7 +153,7 @@ export default function SignIn() {
   // };
 
   return (
-    <div className="w-full h-[100vh] bg-[#ffffff] flex">
+    <div className="w-full min-h-[1024px] h-[100vh] bg-[#ffffff] flex">
       {/* Left side image + text */}
       <div className="hidden md:w-1/2 md:flex md:flex-col lg:p-[66px] md:p-[30px] bg-no-repeat bg-cover bg-center bg-[url('/signin-img.png')]">
         <h2 className="text-[#257117] text-2xl font-bold text-[32px]/[40px]">Smartt</h2>

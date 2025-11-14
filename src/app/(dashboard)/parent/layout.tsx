@@ -13,7 +13,7 @@ export default function HomeLayout({
             <div className="w-[21%]  min-w-[280px]">
                 <Sidebar />
             </div>
-            <Suspense fallback={<Loading />}>
+            <Suspense>
                 <div className="w-[76%] max-w-[1500px] bg-[#F9FAFB]">
                     {children}
                 </div>
