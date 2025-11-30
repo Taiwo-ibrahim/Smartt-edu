@@ -1,6 +1,7 @@
 import { Sidebar } from "@/component/Sidebar"
 import { Suspense } from "react"
 import Loading from "@/component/loading"
+import { RightPanel2 } from "@/component/RightPanel2"
 
 
 export default function HomeLayout({
@@ -10,11 +11,15 @@ export default function HomeLayout({
   }) {
     return (
         <section className="flex w-full gap-[10px] overflow-hidden bg-[#F9FAFB]">
-            <div className="w-[21%]  min-w-[280px]">
+            <div className="hidden md:block lg:block w-[21%]  min-w-[280px]">
                 <Sidebar />
             </div>
+             {/* RIGHT PANEL UNDER MAIN CONTENT FOR MOBILE */}
+             <div className="block top-0 border md:hidden lg:hidden mt-6 w-[13%] min--[20px]">
+              <RightPanel2 />
+            </div>
             <Suspense fallback={<Loading />}>
-                <div className="w-[76%] max-w-[1500px] bg-[#F9FAFB]">
+                <div className=" border w-[76%] max-w-[1500px] bg-[#F9FAFB]">
                     {children}
                 </div>
             </Suspense>

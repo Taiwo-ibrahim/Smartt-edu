@@ -85,6 +85,7 @@ export function Sidebar() {
             isOpen={showLogout}
             onClose={() => setShowLogout(false)}
         />
+
     </aside>
   );
 }

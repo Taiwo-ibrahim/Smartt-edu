@@ -148,10 +148,8 @@ const AnnouncementsCard = () => {
   return (
     <div className="bg-white rounded-2xl shadow-sm p-2 border border-[#CCCCCC] mt-8">
       <div className="flex items-center mb-4">
-        <h2 className="text-lg font-bold text-gray-800 flex items-center">
-          <svg className="w-5 h-5 mr-2 text-red-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15.536 8.464l-4.5 4.5m0 0l-4.5-4.5m4.5 4.5v-7.5M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-          </svg>
+        <h2 className="text-lg font-bold text-gray-800 flex gap-[10px] items-center">
+          <img src="/notification.svg" alt="" className='flex w-[50px] h-[50px]'/>
           Announcements
         </h2>
       </div>
