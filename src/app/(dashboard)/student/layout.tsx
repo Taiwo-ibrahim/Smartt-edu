@@ -15,11 +15,11 @@ export default function HomeLayout({
                 <Sidebar />
             </div>
              {/* RIGHT PANEL UNDER MAIN CONTENT FOR MOBILE */}
-             <div className="block top-0 border md:hidden lg:hidden mt-6 w-[13%] min--[20px]">
+             <div className="flex md:hidden lg:hidden pt-0 w-[13%] min-w-[20px] ">
               <RightPanel2 />
             </div>
             <Suspense fallback={<Loading />}>
-                <div className=" border w-[76%] max-w-[1500px] bg-[#F9FAFB]">
+                <div className=" border w-[80%] sm:w-[76%] max-w-[1500px] bg-[#F9FAFB]">
                     {children}
                 </div>
             </Suspense>

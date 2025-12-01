@@ -14,25 +14,26 @@ export function RightPanel2() {
   ];
 
   return (
-    <div>
-      {/* Mobile toggle button */}
-      <button
-        onClick={() => setMobileOpen(!mobileOpen)}
-        className="md:hidden fixed top-3 left-3 text-2xl z-50  "
-      >
-        🍔
-      </button>
+    <div className="border border-green h-screen">
 
       {/* SIDEBAR */}
       <aside
+    
         className={`
-          bg-white border-r shadow-sm
+          bg-white  shadow-sm
           fixed md:static h-full z-30
           flex flex-col items-center py-6
           transition-all duration-300
           ${mobileOpen ? "w-44" : "w-16"}
         `}
       >
+        
+        <button
+            onClick={() => setMobileOpen(!mobileOpen)}
+            className="md:hidden flex items-center justify-center w-16 left-3 text-2xl z-50  "
+        >
+            🍔
+        </button>
         {/* Mobile (sm) → Expandable */}
         <div className="flex  flex-col md:hidden">
           {menuItems.map((item) => (
